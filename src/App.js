@@ -37,7 +37,9 @@ class App extends React.Component {
             </div>
 
             <div class="col-7">
-              <Route exact path="/:cca3" component={CountryDetails} />
+              {this.state.countries.length > 0 && (
+                <Route exact path="/:cca3" component={(props) => <CountryDetails {...props} countries={this.state.countries} />} />
+              )}
             </div>
           </div>
         </div>
