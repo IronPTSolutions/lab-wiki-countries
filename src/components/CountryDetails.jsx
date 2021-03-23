@@ -13,7 +13,7 @@ const CountryDetails = (props) => {
 
   return (
     <div className="CountryDetails">
-      <h1>{country.name.common}</h1>
+      <h1>{country.name}</h1>
 
       <table className="table">
         <thead></thead>
