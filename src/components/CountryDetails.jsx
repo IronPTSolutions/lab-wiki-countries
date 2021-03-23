@@ -12,7 +12,7 @@ const CountryDetails = (props) => {
   }
 
   return (
-    <div className="CountryDetails">
+    <div data-testid="CountryDetails" className="CountryDetails">
       <h1>{country.name}</h1>
 
       <table className="table">

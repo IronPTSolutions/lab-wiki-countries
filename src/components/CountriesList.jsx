@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 const CountriesList = ({ countries }) => (
-  <div className="CountriesList list-group">
+  <div data-testid="CountriesList" className="CountriesList list-group">
     {countries.map((country) => (
       <Link
         key={country.alpha3Code}

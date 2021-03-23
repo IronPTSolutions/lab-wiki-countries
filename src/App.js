@@ -32,7 +32,10 @@ class App extends React.Component {
               className="col-5"
               style={{ maxHeight: '90vh', overflow: 'scroll' }}
             >
-              {countries.length ? <CountriesList countries={countries} /> : 'Loading...'}
+              {countries.length
+                ? <CountriesList countries={countries} /> 
+                : <p data-testid="loader">'Loading...'</p>
+              }
             
             </div>
 

@@ -1,7 +1,7 @@
 import React from 'react'
 
 const Navbar = () => (
-  <nav className="navbar navbar-dark bg-primary mb-3">
+  <nav data-testid="navbar" className="navbar navbar-dark bg-primary mb-3">
     <div className="container">
       <a className="navbar-brand" href="/">WikiCountries</a>
     </div>
