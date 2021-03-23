@@ -26,19 +26,19 @@ class App extends React.Component {
       <div className="App">
         <Navbar />
 
-        <div class="container">
-          <div class="row">
+        <div className="container">
+          <div className="row">
             <div
-              class="col-5"
+              className="col-5"
               style={{ maxHeight: '90vh', overflow: 'scroll' }}
             >
               {countries.length ? <CountriesList countries={countries} /> : 'Loading...'}
             
             </div>
 
-            <div class="col-7">
+            <div className="col-7">
               {this.state.countries.length > 0 && (
-                <Route exact path="/:cca3" component={(props) => <CountryDetails {...props} countries={this.state.countries} />} />
+                <Route exact path="/:alpha3Code" component={(props) => <CountryDetails {...props} countries={this.state.countries} />} />
               )}
             </div>
           </div>

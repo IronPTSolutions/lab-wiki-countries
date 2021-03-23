@@ -2,14 +2,15 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 const CountriesList = ({ countries }) => (
-  <div class="list-group">
+  <div className="CountriesList list-group">
     {countries.map((country) => (
       <Link
-        class="list-group-item list-group-item-action"
-        to={`/${country.cca3}`}
+        key={country.alpha3Code}
+        className="list-group-item list-group-item-action"
+        to={`/${country.alpha3Code}`}
       >
-        <span className="mr-4">{country.flag}</span>
-        {country.name.common}
+        <img height={10} alt={country.name} src={country.flag} className="mr-4" />
+        {country.name}
       </Link>
     ))}
   </div>

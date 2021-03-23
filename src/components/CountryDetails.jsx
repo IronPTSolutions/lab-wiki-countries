@@ -2,8 +2,8 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 const CountryDetails = (props) => {
-  const { countries, match: { params: { cca3 } } } = props
-  const country = countries.find(country => country.cca3 === cca3)
+  const { countries, match: { params: { alpha3Code } } } = props
+  const country = countries.find(country => country.alpha3Code === alpha3Code)
 
   if (!country) {
     return (
@@ -15,12 +15,12 @@ const CountryDetails = (props) => {
     <div className="CountryDetails">
       <h1>{country.name.common}</h1>
 
-      <table class="table">
+      <table className="table">
         <thead></thead>
         <tbody>
           <tr>
             <td style={{ width: '30%'}}>Capital</td>
-            <td>{country.capital[0]}</td>
+            <td>{country.capital}</td>
           </tr>
           <tr>
             <td>Area</td>
@@ -33,7 +33,7 @@ const CountryDetails = (props) => {
             <td>
               <ul>
                 {country.borders.map(border => (
-                  <li>
+                  <li key={border}>
                     <Link to={`/${border}`}>{border}</Link>
                   </li>
                 ))}
